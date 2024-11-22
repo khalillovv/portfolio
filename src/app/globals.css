@@ -5,7 +5,7 @@
 :root {
 	--primary-color: #5eead4;
 	--bg-color: #0f172a;
-	--text-color: #94a3b9;
+	--text-color: #94a3b8;
 	--title-color: #e2e8f0;
 	--bg-primary: #2dd4bf1a;
 }
@@ -25,4 +25,12 @@ body {
 	color: var(--text-color);
 	background: var(--bg-color);
 	font-family: var(--inter), sans-serif;
+}
+
+.highlight-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: background 0.2s ease-in-out;
+	overflow: hidden;
 }

@@ -1,3 +1,4 @@
+import { Container, HighlightContainer } from '@/components'
 import { SITE_NAME } from '@/constants/seo.constants'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -29,7 +30,13 @@ export default function RootLayout({
 			<head>
 				<link data-rh='true' rel='icon' href='/logo.png' />
 			</head>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<main>
+					<HighlightContainer>
+						<Container>{children}</Container>
+					</HighlightContainer>
+				</main>
+			</body>
 		</html>
 	)
 }
