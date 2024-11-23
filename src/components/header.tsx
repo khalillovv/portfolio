@@ -11,10 +11,11 @@ export const Header: React.FC<Props> = ({ className }) => {
 	return (
 		<header
 			className={cn(
-				'flex flex-col justify-between h-screen lg:w-1/2 lg:py-24',
+				'flex flex-col justify-between h-screen lg:w-1/2 lg:py-24', // Используем h-screen для растяжения на весь экран
 				className
 			)}
 		>
+			{/* Верхняя часть */}
 			<div>
 				<Link
 					href={DASHBOARD_PAGES.HOME}
@@ -50,6 +51,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 				</nav>
 			</div>
 
+			{/* Нижняя часть */}
 			<div>
 				<Link
 					href={DASHBOARD_PAGES.GITHUB}
