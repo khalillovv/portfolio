@@ -1,13 +1,10 @@
+import { Content, Header } from '@/components'
+
 export default function Home() {
 	return (
-		<div>
-			<h1 className='text-primary'>Portfolio</h1>
-			<p className='text-text'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-				architecto corporis, repudiandae maxime consequuntur est, nam inventore
-				quas accusantium quae unde soluta, impedit cupiditate illo alias ut
-				laborum dolores mollitia.
-			</p>
+		<div className='flex flex-row gap-4'>
+			<Header className='w-1/2' />
+			<Content className='w-1/2' />
 		</div>
 	)
 }
