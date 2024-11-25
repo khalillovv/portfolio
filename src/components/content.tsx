@@ -1,10 +1,15 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
+import { About } from './about'
 
 interface Props {
 	className?: string
 }
 
 export const Content: React.FC<Props> = ({ className }) => {
-	return <div className={cn('', className)}>content</div>
+	return (
+		<div className={cn('lg:py-24', className)}>
+			<About />
+		</div>
+	)
 }
