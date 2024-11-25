@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-	--primary-color: #5eead4;
-	--bg-color: #0f172a;
-	--text-color: #94a3b8;
-	--title-color: #e2e8f0;
-	--bg-primary: #2dd4bf1a;
+	--primary-color: rgb(94, 234, 212);
+	--bg-color: rgb(15, 23, 42);
+	--text-color: rgb(148, 163, 184);
+	--title-color: rgb(226, 232, 240);
+	--bg-primary: rgba(45, 212, 191, 0.1);
 }
 
 [data-theme='dark'] {
-	--bg-color: #0f172a;
-	--text-color: #444f63;
-	--title-color: #e2e8f0;
+	--bg-color: rgb(15, 23, 42);
+	--text-color: rgb(148, 163, 184);
+	--title-color: rgb(226, 232, 240);
 }
 
 [data-theme='light'] {
@@ -22,9 +22,13 @@
 }
 
 body {
-	color: var(--text-color);
-	background: var(--bg-color);
 	font-family: var(--inter), sans-serif;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
 }
 
 .highlight-container {
