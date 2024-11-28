@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 import { About } from './about'
+import { Projects } from './projects'
 
 interface Props {
 	className?: string
@@ -9,7 +10,8 @@ interface Props {
 export const Content: React.FC<Props> = ({ className }) => {
 	return (
 		<div className={cn('lg:py-24', className)}>
-			<About />
+			<About className='mb-36' />
+			<Projects />
 		</div>
 	)
 }
