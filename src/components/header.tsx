@@ -31,7 +31,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 				<nav className='nav hidden lg:block'>
 					<ul className='mt-16 w-max'>
 						<li>
-							<a className='group flex items-center py-3' href='#about'>
+							<a className='group flex items-center py-3' href=''>
 								<span className='nav-indicator mr-4 h-px w-8 bg-text transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none'></span>
 								<span className='nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title'>
 									About
@@ -39,7 +39,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 							</a>
 						</li>
 						<li>
-							<a className='group flex items-center py-3' href='#projects'>
+							<a className='group flex items-center py-3' href=''>
 								<span className='nav-indicator mr-4 h-px w-8 bg-text transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none'></span>
 								<span className='nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title'>
 									Projects
