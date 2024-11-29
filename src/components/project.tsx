@@ -94,7 +94,7 @@ export const Project: React.FC<Props> = ({
 								className='transition-transform transform translate-x-0 translate-y-1 group-hover:translate-x-1 group-hover:translate-y-0'
 							/>
 						</div>
-						<h3 className='mt-2'>{description}</h3>
+						<h3 className='mt-2 text-xs'>{description}</h3>
 						<div className='flex flex-row flex-wrap gap-2 mt-3 text-primary'>
 							{build?.map(b => (
 								<p
