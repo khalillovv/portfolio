@@ -14,7 +14,7 @@ interface Props {
 export const Projects: React.FC<Props> = ({ className }) => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null)
 	return (
-		<div className={cn('flex flex-wrap gap-2', className)}>
+		<div id='projects' className={cn('flex flex-wrap gap-2', className)}>
 			<ul>
 				{PROJECTS.slice(0, 4).map((project, index) => (
 					<li
@@ -42,7 +42,7 @@ export const Projects: React.FC<Props> = ({ className }) => {
 			</ul>
 
 			<Link
-				className='flex flex-row gap-1 text-title mt-6 font-semibold min-h-6 group'
+				className='flex flex-row gap-1 text-title mt-6 font-semibold group'
 				href={DASHBOARD_PAGES.ARCHIVE}
 			>
 				<span className='group-hover:border-b-2 border-primary'>
