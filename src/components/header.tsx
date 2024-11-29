@@ -1,13 +1,15 @@
+'use client'
 import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 interface Props {
 	className?: string
 }
 
 export const Header: React.FC<Props> = ({ className }) => {
+	const [activeSection, setActiveSection] = useState('')
 	return (
 		<header
 			className={cn(
@@ -31,17 +33,45 @@ export const Header: React.FC<Props> = ({ className }) => {
 				<nav className='nav hidden lg:block'>
 					<ul className='mt-16 w-max'>
 						<li>
-							<a className='group flex items-center py-3' href=''>
-								<span className='nav-indicator mr-4 h-px w-8 bg-text transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none'></span>
-								<span className='nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title'>
+							<a
+								className='group flex items-center py-3'
+								onClick={() => setActiveSection('about')}
+								href='#about'
+							>
+								<span
+									className={cn(
+										'nav-indicator mr-4 h-px w-8 bg-text transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none',
+										activeSection === 'about' && 'bg-title w-16'
+									)}
+								></span>
+								<span
+									className={cn(
+										'nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title',
+										activeSection === 'about' && 'text-title'
+									)}
+								>
 									About
 								</span>
 							</a>
 						</li>
 						<li>
-							<a className='group flex items-center py-3' href=''>
-								<span className='nav-indicator mr-4 h-px w-8 bg-text transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none'></span>
-								<span className='nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title'>
+							<a
+								className='group flex items-center py-3'
+								onClick={() => setActiveSection('projects')}
+								href='#projects'
+							>
+								<span
+									className={cn(
+										'nav-indicator mr-4 h-px w-8 bg-text transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none',
+										activeSection === 'projects' && 'bg-title w-16'
+									)}
+								></span>
+								<span
+									className={cn(
+										'nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title',
+										activeSection === 'projects' && 'text-title'
+									)}
+								>
 									Projects
 								</span>
 							</a>
