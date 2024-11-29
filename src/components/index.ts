@@ -1,6 +1,7 @@
 export { About } from './about'
 export { Container } from './container'
 export { Content } from './content'
+export { Footer } from './footer'
 export { Header } from './header'
 export { HighlightContainer } from './highlight-container'
 export { Project } from './project'
