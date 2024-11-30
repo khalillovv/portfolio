@@ -24,7 +24,7 @@ export const HighlightContainer: React.FC<HighlightContainerProps> = ({
 		<div
 			className='highlight-container'
 			style={{
-				background: `radial-gradient(circle at ${gradientPosition.x}% ${gradientPosition.y}%, rgb(18, 32, 68, 1), transparent 40%)`,
+				background: `radial-gradient(circle at ${gradientPosition.x}% ${gradientPosition.y}%, var(--highlight), transparent 40%)`,
 			}}
 			onMouseMove={isDesktop ? handleMouseMove : undefined}
 		>
