@@ -12,10 +12,12 @@ const config: Config = {
 		extend: {
 			colors: {
 				primary: 'var(--primary-color)',
-				background: 'var(--bg-color)',
 				backgroundPrimary: 'var(--bg-primary)',
+				background: 'var(--bg-color)',
 				text: 'var(--text-color)',
 				title: 'var(--title-color)',
+				highlight: 'var(--highlight)',
+				projectBg: 'var(--project-bg)',
 			},
 			spacing: {
 				0.5: '0.12rem',

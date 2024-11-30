@@ -1,4 +1,4 @@
-import { Container, HighlightContainer } from '@/components'
+import { Container, HighlightContainer, SettingsHeader } from '@/components'
 import { SITE_NAME } from '@/constants/seo.constants'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -26,13 +26,14 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en' data-theme='dark'>
+		<html lang='en'>
 			<head>
 				<link data-rh='true' rel='icon' href='/logo.png' />
 			</head>
 			<body className={inter.className}>
 				<main>
 					<HighlightContainer>
+						<SettingsHeader />
 						<Container>{children}</Container>
 					</HighlightContainer>
 				</main>
