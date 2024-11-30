@@ -42,7 +42,7 @@ export const Projects: React.FC<Props> = ({ className }) => {
 			</ul>
 
 			<Link
-				className='flex flex-row gap-1 text-title mt-6 font-semibold group'
+				className='flex flex-row gap-1 text-title mt-6 font-semibold min-h-6 group'
 				href={DASHBOARD_PAGES.ARCHIVE}
 			>
 				<span className='group-hover:border-b-2 border-primary'>

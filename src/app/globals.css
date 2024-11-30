@@ -4,21 +4,32 @@
 
 :root {
 	--primary-color: rgb(94, 234, 212);
+	--bg-primary: rgba(45, 212, 191, 0.1);
 	--bg-color: rgb(15, 23, 42);
 	--text-color: rgb(148, 163, 184);
 	--title-color: rgb(226, 232, 240);
-	--bg-primary: rgba(45, 212, 191, 0.1);
+	--highlight: rgb(18, 32, 68, 1);
+	--project-bg: rgb(112, 126, 174, 0.1);
 }
 
 [data-theme='dark'] {
+	--primary-color: rgb(94, 234, 212);
+	--bg-primary: rgba(45, 212, 191, 0.1);
 	--bg-color: rgb(15, 23, 42);
 	--text-color: rgb(148, 163, 184);
 	--title-color: rgb(226, 232, 240);
+	--highlight: rgb(18, 32, 68, 1);
+	--project-bg: rgb(112, 126, 174, 0.1);
 }
 
 [data-theme='light'] {
-	--bg-color: #ffffff;
-	--text-color: #0f172a;
+	--primary-color: rgb(94, 234, 212);
+	--bg-primary: rgba(45, 212, 191, 0.1);
+	--bg-color: rgb(15, 23, 42);
+	--text-color: rgb(148, 163, 184);
+	--title-color: rgb(226, 232, 240);
+	--highlight: rgb(18, 32, 68, 1);
+	--project-bg: rgb(112, 126, 174, 0.1);
 }
 
 html {
