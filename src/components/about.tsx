@@ -18,7 +18,9 @@ export const About: React.FC<Props> = ({ className }) => {
 			</p>
 			<p className='font-normal leading-6 mb-4'>
 				На даний момент я{' '}
-				<span className='text-title'>Junior Fullstack-розробник.</span>
+				<span className='text-title font-semibold'>
+					Junior Fullstack-розробник.
+				</span>
 			</p>
 			<p className='font-normal leading-6'>
 				У вільний час я люблю дивитися фільми, слухати музику та проводити час з
