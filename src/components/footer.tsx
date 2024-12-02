@@ -12,7 +12,7 @@ export const Footer: React.FC<Props> = ({ className }) => {
 			Built with {''}
 			<Link
 				href='https://nextjs.org/'
-				className='text-title transition-colors hover:text-primary'
+				className='text-title transition-colors hover:text-primary font-semibold'
 				target='_blank'
 			>
 				Next.js
@@ -20,7 +20,7 @@ export const Footer: React.FC<Props> = ({ className }) => {
 			{''} and {''}
 			<Link
 				href='https://tailwindcss.com/'
-				className='text-title transition-colors hover:text-primary'
+				className='text-title transition-colors hover:text-primary font-semibold'
 				target='_blank'
 			>
 				Tailwind CSS
@@ -28,7 +28,7 @@ export const Footer: React.FC<Props> = ({ className }) => {
 			, deployed with {''}
 			<Link
 				href='https://vercel.com'
-				className='text-title transition-colors hover:text-primary'
+				className='text-title transition-colors hover:text-primary font-semibold'
 				target='_blank'
 			>
 				Vercel
