@@ -8,7 +8,7 @@ interface Props {
 
 export const SettingsHeader: React.FC<Props> = ({ className }) => {
 	return (
-		<div className={cn('fixed top-10 left-16', className)}>
+		<div className={cn('fixed top-10 left-8', className)}>
 			<div className='min-w-[62px]'>
 				<SwitchButton />
 			</div>
