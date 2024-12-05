@@ -9,6 +9,7 @@ interface Props {
 	year?: string
 	title: string
 	description?: string
+	development?: string
 	build?: string[]
 	linkName?: string
 	link?: string
@@ -21,6 +22,7 @@ export const Project: React.FC<Props> = ({
 	image,
 	title,
 	description,
+	development,
 	build,
 	linkName,
 	link,
@@ -31,20 +33,35 @@ export const Project: React.FC<Props> = ({
 		return (
 			<tr className='align-top border-b border-gray-600 border-opacity-10'>
 				<td className='pr-4 pt-5 pb-6 font-normal text-xs'>{year}</td>
-				<td className='pr-4 pt-5 pb-6 text-title font-semibold leading-[22px]'>
-					{title}
+				<td className='flex flex-row gap-1 lg:block pr-4 pt-5 pb-6 text-title font-semibold leading-[22px]'>
+					<div className='md:hidden'>
+						{link ? (
+							<Link className='flex flex-row gap-1' href={link} target='_blank'>
+								{title}
+								<ArrowUpRight width={15} height={15} />
+							</Link>
+						) : (
+							<span>{title}</span>
+						)}
+					</div>
+					<div className='hidden md:block'>{title}</div>
 				</td>
-				<td className='pr-4 pt-5 pb-6 flex flex-row flex-wrap gap-2 text-primary'>
-					{build?.map(b => (
-						<p
-							key={b}
-							className='text-[12px] px-3 py-2 bg-backgroundPrimary rounded-full'
-						>
-							{b}
-						</p>
-					))}
+				<td className='hidden lg:table-cell pr-4 pt-5 pb-6'>
+					<p>{development}</p>
 				</td>
-				<td className='pr-4 pt-5 pb-6'>
+				<td className='hidden lg:table-cell pr-4 pt-5 pb-6 text-primary'>
+					<div className='flex flex-row flex-wrap gap-2'>
+						{build?.map(b => (
+							<p
+								key={b}
+								className='text-[12px] px-3 py-2 bg-backgroundPrimary rounded-full'
+							>
+								{b}
+							</p>
+						))}
+					</div>
+				</td>
+				<td className='hidden md:table-cell pr-4 pt-5 pb-6'>
 					{link && (
 						<Link
 							href={link}
@@ -68,20 +85,22 @@ export const Project: React.FC<Props> = ({
 		<div
 			id='projects'
 			className={cn(
-				'w-[536px] rounded-lg cursor-pointer transition-all hover:bg-projectBg group',
+				'rounded-lg cursor-pointer transition-all lg:p-6 hover:bg-projectBg group',
 				className
 			)}
 		>
 			<Link href={`${link}`} target='_blank'>
-				<div className={cn('flex flex-row px-6 py-5 gap-4 ', className)}>
+				<div
+					className={cn('flex flex-col-reverse md:flex-row gap-6', className)}
+				>
 					<div className='flex-shrink-0'>
 						{image && (
 							<Image
-								width={120}
-								height={48}
+								width={200}
+								height={114}
 								src={image}
 								alt={title}
-								className='object-cover'
+								className='object-cover lg:w-[120px] border'
 							/>
 						)}
 					</div>
@@ -94,7 +113,9 @@ export const Project: React.FC<Props> = ({
 								className='transition-transform transform translate-x-0 translate-y-1 group-hover:translate-x-1 group-hover:translate-y-0'
 							/>
 						</div>
-						<h3 className='mt-2 text-xs'>{description}</h3>
+						<h3 className='mt-2 text-xs font-normal leading-[21px]  lg:leading-[20px]'>
+							{description}
+						</h3>
 						<div className='flex flex-row flex-wrap gap-2 mt-3 text-primary'>
 							{build?.map(b => (
 								<p

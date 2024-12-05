@@ -5,6 +5,7 @@ export const PROJECTS = [
 		title: 'Cafe-bar Olena',
 		description:
 			'Web application for viewing the cafe menu. Search by name has been implemented. Admin panel, adding, editing and deleting positions',
+		development: 'FullStack',
 		build: [
 			'NextJs',
 			'Typescript',
@@ -24,6 +25,7 @@ export const PROJECTS = [
 		title: 'Pizza',
 		description:
 			'Website for ordering pizza. Filter by dough type, size, price and ingredients. Shopping cart for placing orders. Registration and login have been implemented. Adding, editing and deleting positions.',
+		development: 'FullStack',
 		build: [
 			'NextJs',
 			'Typescript',
@@ -41,6 +43,7 @@ export const PROJECTS = [
 		year: '2024',
 		title: 'News',
 		description: 'Website for viewing news from around the world',
+		development: 'FrontEnd',
 		build: ['ReactJs', 'Javascript', 'Vite'],
 		linkName: 'news-project-alex.vercel.app',
 		link: 'https://news-project-alex.vercel.app/',
@@ -51,6 +54,7 @@ export const PROJECTS = [
 		title: 'Countries',
 		description:
 			'A site for viewing news from around the world. Search by name, filter by region, switch between light and dark theme.',
+		development: 'FrontEnd',
 		build: ['ReactJs', 'Javascript', 'Vite'],
 		linkName: 'countries-bay-nine.vercel.app',
 		link: 'https://countries-bay-nine.vercel.app',

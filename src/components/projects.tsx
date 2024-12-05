@@ -14,14 +14,19 @@ interface Props {
 export const Projects: React.FC<Props> = ({ className }) => {
 	const [activeIndex, setActiveIndex] = useState<number | null>(null)
 	return (
-		<div id='projects' className={cn('flex flex-wrap gap-2', className)}>
+		<div id='projects' className={cn('', className)}>
+			<div className='sticky lg:hidden top-0 z-20 mb-6 py-5 backdrop-blur'>
+				<h2 className='text-[14px] font-bold text-title uppercase tracking-widest'>
+					Projects
+				</h2>
+			</div>
 			<ul>
 				{PROJECTS.slice(0, 4).map((project, index) => (
 					<li
 						key={project.title}
 						onMouseEnter={() => setActiveIndex(index)}
 						onMouseLeave={() => setActiveIndex(null)}
-						className={`transition-opacity ${
+						className={`mb-12 lg:mb-0 transition-opacity ${
 							activeIndex !== null && activeIndex !== index
 								? 'opacity-50'
 								: 'opacity-100'
@@ -45,8 +50,8 @@ export const Projects: React.FC<Props> = ({ className }) => {
 				className='flex flex-row gap-1 text-title mt-6 font-semibold min-h-6 group'
 				href={DASHBOARD_PAGES.ARCHIVE}
 			>
-				<span className='group-hover:border-b-2 border-primary'>
-					Архів всіх проектів
+				<span className='group-hover:border-b-2 border-primary capitalize'>
+					View full project archive
 				</span>
 				<ArrowRight
 					className='transition-transform group-hover:translate-x-1 mt-0.5'
