@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	return (
-		<div className='py-24 h-[100vh]'>
+		<div className='lg:py-28 lg:h-[100vh]'>
 			<Link
 				href={DASHBOARD_PAGES.HOME}
 				className='mb-2 flex flex-row gap-1 font-semibold items-center text-primary group'
@@ -24,8 +24,8 @@ export default function Page() {
 				/>
 				Khalilov Oleksandr
 			</Link>
-			<h1 className='text-[48px] font-bold leading-[48px] text-title'>
-				Всі проєкти
+			<h1 className='text-3xl md:text-[48px] font-bold leading-[48px] text-title capitalize'>
+				All projects
 			</h1>
 			<ProjectsTable />
 		</div>

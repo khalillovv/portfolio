@@ -13,23 +13,24 @@ export const Header: React.FC<Props> = ({ className }) => {
 	return (
 		<header
 			className={cn(
-				'flex flex-col justify-between h-screen lg:w-1/2 lg:py-24',
+				'flex flex-col justify-between lg:h-screen lg:w-1/2 lg:py-24',
 				className
 			)}
 		>
 			<div>
 				<Link
 					href={DASHBOARD_PAGES.HOME}
-					className='text-3xl text-title font-bold tracking-tight sm:text-4xl'
+					className='text-3xl text-title font-bold tracking-tight sm:text-[48px] leading-10 md:leading-[48px]'
 				>
 					Khalilov Oleksandr
 				</Link>
-				<h2 className='mt-3 text-lg text-title font-medium tracking-tight sm:text-xl'>
+				<h2 className='mt-3 text-[18px] md:text-[20px] text-title leading-7 md:leading-7 font-medium tracking-tight'>
 					Full Stack Developer
 				</h2>
 				<p className='text-text font-normal mt-4 max-w-xs leading-normal'>
 					I build accessible, pixel-perfect digital experiences for the web.
 				</p>
+
 				<nav className='nav hidden lg:block'>
 					<ul className='mt-16 w-max'>
 						<li>
@@ -46,7 +47,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 								></span>
 								<span
 									className={cn(
-										'nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title',
+										'text-[12px] leading-4 font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title',
 										activeSection === 'about' && 'text-title'
 									)}
 								>
@@ -68,7 +69,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 								></span>
 								<span
 									className={cn(
-										'nav-text text-xs font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title',
+										'text-[12px] leading-4 font-bold uppercase tracking-widest text-text group-hover:text-title group-focus-visible:text-title',
 										activeSection === 'projects' && 'text-title'
 									)}
 								>
@@ -84,7 +85,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 				<Link
 					href={DASHBOARD_PAGES.GITHUB}
 					target='_blank'
-					className='ml-1 inline-block hover:text-title transition-colors'
+					className='ml-1 mt-8 lg:mt-0 inline-block hover:text-title transition-colors'
 				>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
