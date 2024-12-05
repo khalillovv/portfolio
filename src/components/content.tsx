@@ -10,8 +10,8 @@ interface Props {
 
 export const Content: React.FC<Props> = ({ className }) => {
 	return (
-		<div className={cn('lg:py-24', className)}>
-			<About className='mb-36' />
+		<div className={cn('py-24 lg:w-[530px]', className)}>
+			<About className='mb-24' />
 			<Projects />
 			<Footer />
 		</div>
