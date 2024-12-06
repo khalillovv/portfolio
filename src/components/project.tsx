@@ -85,7 +85,7 @@ export const Project: React.FC<Props> = ({
 		<div
 			id='projects'
 			className={cn(
-				'rounded-lg cursor-pointer transition-all lg:p-6 hover:bg-projectBg group',
+				'rounded-lg cursor-pointer transition-all lg:p-6 lg:hover:bg-projectBg group',
 				className
 			)}
 		>
