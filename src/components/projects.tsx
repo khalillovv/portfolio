@@ -28,8 +28,8 @@ export const Projects: React.FC<Props> = ({ className }) => {
 						onMouseLeave={() => setActiveIndex(null)}
 						className={`mb-12 lg:mb-0 transition-opacity ${
 							activeIndex !== null && activeIndex !== index
-								? 'opacity-50'
-								: 'opacity-100'
+								? 'lg:opacity-50'
+								: 'lg:opacity-100'
 						}`}
 					>
 						<Project
