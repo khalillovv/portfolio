@@ -1,4 +1,9 @@
-import { Container, HighlightContainer, SettingsHeader } from '@/components'
+import {
+	Container,
+	HighlightContainer,
+	LoadingScreenMotion,
+	SettingsHeader,
+} from '@/components'
 import { SITE_NAME } from '@/constants/seo.constants'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -32,6 +37,7 @@ export default function RootLayout({
 			</head>
 			<body className={inter.className}>
 				<main>
+					<LoadingScreenMotion />
 					<HighlightContainer>
 						<SettingsHeader />
 						<Container>{children}</Container>
