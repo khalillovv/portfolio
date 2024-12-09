@@ -9,11 +9,21 @@ export const LoadingScreenMotion = () => {
 	const [isVisible, setIsVisible] = useState(true)
 
 	useEffect(() => {
+		if (isVisible) {
+			document.body.classList.add('overflow-hidden')
+		} else {
+			document.body.classList.remove('overflow-hidden')
+		}
+
 		const timer = setTimeout(() => {
 			setIsVisible(false)
 		}, 3000)
-		return () => clearTimeout(timer)
-	}, [])
+
+		return () => {
+			clearTimeout(timer)
+			document.body.classList.remove('overflow-hidden')
+		}
+	}, [isVisible])
 
 	return (
 		<AnimatePresence>
