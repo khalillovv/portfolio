@@ -17,7 +17,7 @@ export const LoadingScreenMotion = () => {
 
 		const timer = setTimeout(() => {
 			setIsVisible(false)
-		}, 3000)
+		}, 300000000)
 
 		return () => {
 			clearTimeout(timer)
@@ -35,6 +35,11 @@ export const LoadingScreenMotion = () => {
 					exit={{ opacity: 0 }}
 					transition={{ duration: 1 }}
 				>
+					<div className={styles.stars}>
+						<div className={styles.star1}></div>
+						<div className={styles.star2}></div>
+						<div className={styles.star3}></div>
+					</div>
 					<motion.h1
 						className={cn(
 							'flex flex-col gap-4 lg:flex-row lg:gap-0 lg:items-baseline',
