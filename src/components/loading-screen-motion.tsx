@@ -17,7 +17,7 @@ export const LoadingScreenMotion = () => {
 
 		const timer = setTimeout(() => {
 			setIsVisible(false)
-		}, 3000)
+		}, 300000)
 
 		return () => {
 			clearTimeout(timer)
@@ -56,7 +56,14 @@ export const LoadingScreenMotion = () => {
 						<span className='text-[44px] md:text-[64px] lg:text-[80px]'>
 							khalilov
 						</span>
-						<span className='text-[12px] md:text-sm'>Portfolio</span>
+						<span
+							className={cn(
+								'text-[12px] md:text-sm',
+								styles.loading_text__portfolio
+							)}
+						>
+							Portfolio
+						</span>
 					</motion.h1>
 				</motion.div>
 			)}
