@@ -20,6 +20,12 @@
 	letter-spacing: 0.1em;
 }
 
+.loading_text__portfolio {
+	background: -webkit-linear-gradient(#fff, #38495a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .stars {
 	position: absolute;
 	top: 0;
