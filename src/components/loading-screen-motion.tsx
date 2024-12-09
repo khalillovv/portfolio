@@ -17,7 +17,7 @@ export const LoadingScreenMotion = () => {
 
 		const timer = setTimeout(() => {
 			setIsVisible(false)
-		}, 300000)
+		}, 3000)
 
 		return () => {
 			clearTimeout(timer)
