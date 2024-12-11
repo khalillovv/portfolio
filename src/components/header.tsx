@@ -1,14 +1,17 @@
 'use client'
 import { DASHBOARD_PAGES } from '@/config/pages-url.config'
+import { TRANSLATION } from '@/config/translation.config'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
 	className?: string
 }
 
 export const Header: React.FC<Props> = ({ className }) => {
+	const { t } = useTranslation()
 	const [activeSection, setActiveSection] = useState('')
 	return (
 		<header
@@ -28,7 +31,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 					Full Stack Developer
 				</h2>
 				<p className='text-text font-normal mt-4 max-w-xs leading-normal'>
-					I build accessible, pixel-perfect digital experiences for the web.
+					{t(TRANSLATION.HEADER_TEXT)}
 				</p>
 
 				<nav className='nav hidden lg:block'>
@@ -51,7 +54,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 										activeSection === 'about' && 'text-title'
 									)}
 								>
-									About
+									{t(TRANSLATION.ABOUT_NAV)}
 								</span>
 							</a>
 						</li>
@@ -73,7 +76,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 										activeSection === 'projects' && 'text-title'
 									)}
 								>
-									Projects
+									{t(TRANSLATION.PROJECTS_NAV)}
 								</span>
 							</a>
 						</li>

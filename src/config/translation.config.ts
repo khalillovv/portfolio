@@ -1,0 +1,15 @@
+export const TRANSLATION = {
+	HEADER_TEXT: 'headerText',
+	ABOUT_NAV: 'aboutNav',
+	PROJECTS_NAV: 'projectsNav',
+	ABOUT_TEXT_FIRST: 'aboutTextFirst',
+	ABOUT_TEXT_SECOND: 'aboutTextSecond',
+	ABOUT_TEXT_THIRD: 'aboutTextThird',
+	VIEW_ARCHIVE: 'viewArchive',
+	ALL_PROJECTS: 'allProjects',
+	TABLE_YEAR: 'tableYear',
+	TABLE_PROJECT: 'tableProject',
+	TABLE_DEVELOPMENT: 'tableDevelopment',
+	TABLE_BUILT_WITH: 'tableBuiltWith',
+	TABLE_LINK: 'tableLink',
+}

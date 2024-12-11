@@ -1,0 +1,15 @@
+{
+	"headerText": "I build accessible, pixel-perfect digital experiences for the web.",
+	"aboutNav": "about",
+	"projectsNav": "projects",
+	"aboutTextFirst": "I`m a developer passionate about creating accessible, pixel-perfect user interfaces. I love combining thoughtful design with robust functionality, creating apps that are not only visually stunning, but also user-friendly. Especially inspiring is the work at the intersection of design and development, where projects combining aesthetics, performance and practicality are born.",
+	"aboutTextSecond": "I am currently a <1 className='text-title font-semibold'>Junior Fullstack-developer.</1>",
+	"aboutTextThird": "In my spare time, I watch movies, listen to music and spend time with friends.",
+	"viewArchive": "View full project archive",
+	"allProjects": "All projects",
+	"tableYear": "Year",
+	"tableProject": "Project",
+	"tableDevelopment": "Development",
+	"tableBuiltWith": "Built with",
+	"tableLink": "Link"
+}
