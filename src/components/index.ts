@@ -1,4 +1,6 @@
 export { About } from './about'
+export { ArchiveHeader } from './archive-header'
+export { ChangeLanguage } from './change-language'
 export { Container } from './container'
 export { Content } from './content'
 export { Footer } from './footer'
