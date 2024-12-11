@@ -5,6 +5,7 @@ import {
 	SettingsHeader,
 } from '@/components'
 import { SITE_NAME } from '@/constants/seo.constants'
+import { I18nProvider } from '@/utils/I18nProvider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -39,8 +40,10 @@ export default function RootLayout({
 				<main>
 					<LoadingScreenMotion />
 					<HighlightContainer>
-						<SettingsHeader />
-						<Container>{children}</Container>
+						<I18nProvider>
+							<SettingsHeader />
+							<Container>{children}</Container>
+						</I18nProvider>
 					</HighlightContainer>
 				</main>
 			</body>

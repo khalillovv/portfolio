@@ -1,10 +1,12 @@
 'use client'
 import { DASHBOARD_PAGES } from '@/config/pages-url.config'
+import { TRANSLATION } from '@/config/translation.config'
 import { cn } from '@/lib/utils'
 import { PROJECTS } from '@/projects.data'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Project } from './project'
 
 interface Props {
@@ -12,12 +14,13 @@ interface Props {
 }
 
 export const Projects: React.FC<Props> = ({ className }) => {
+	const { t } = useTranslation()
 	const [activeIndex, setActiveIndex] = useState<number | null>(null)
 	return (
 		<div id='projects' className={cn('', className)}>
 			<div className='sticky lg:hidden top-0 z-20 mb-6 py-5 backdrop-blur'>
 				<h2 className='text-[14px] font-bold text-title uppercase tracking-widest'>
-					Projects
+					{t(TRANSLATION.PROJECTS_NAV)}
 				</h2>
 			</div>
 			<ul>
@@ -51,7 +54,7 @@ export const Projects: React.FC<Props> = ({ className }) => {
 				href={DASHBOARD_PAGES.ARCHIVE}
 			>
 				<span className='group-hover:border-b-2 border-primary capitalize'>
-					View full project archive
+					{t(TRANSLATION.VIEW_ARCHIVE)}
 				</span>
 				<ArrowRight
 					className='transition-transform group-hover:translate-x-1 mt-0.5'

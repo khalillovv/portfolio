@@ -1,6 +1,9 @@
+'use client'
+import { TRANSLATION } from '@/config/translation.config'
 import { cn } from '@/lib/utils'
 import { PROJECTS } from '@/projects.data'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Project } from './project'
 
 interface Props {
@@ -8,22 +11,25 @@ interface Props {
 }
 
 export const ProjectsTable: React.FC<Props> = ({ className }) => {
+	const { t } = useTranslation()
 	return (
 		<table className={cn('table-auto w-full mt-12', className)}>
 			<thead className='sticky top-0 z-10 backdrop-blur-md bg-backgroundPrimary/80'>
 				<tr className='text-left text-title'>
-					<th className='w-1p pr-8 py-4 font-semibold text-xs'>Year</th>
+					<th className='w-1p pr-8 py-4 font-semibold text-xs'>
+						{t(TRANSLATION.TABLE_YEAR)}
+					</th>
 					<th className='md:w-50p lg:w-20p pr-8 py-4 font-semibold text-xs'>
-						Project
+						{t(TRANSLATION.TABLE_PROJECT)}
 					</th>
 					<th className='hidden lg:table-cell w-1/6 pr-8 py-4 font-semibold text-xs'>
-						Development
+						{t(TRANSLATION.TABLE_DEVELOPMENT)}
 					</th>
 					<th className='hidden lg:table-cell w-2/6 pr-8 py-4 font-semibold text-xs'>
-						Built with
+						{t(TRANSLATION.TABLE_BUILT_WITH)}
 					</th>
 					<th className='hidden md:table-cell lg:w-2/6 py-4 font-semibold text-xs'>
-						Link
+						{t(TRANSLATION.TABLE_LINK)}
 					</th>
 				</tr>
 			</thead>
