@@ -10,17 +10,22 @@ interface Props {
 export const ChangeLanguage: React.FC<Props> = ({ className }) => {
 	const { i18n } = useTranslation()
 
-	useEffect(() => {
-		const savedLanguage = localStorage.getItem('language')
-		if (savedLanguage && savedLanguage !== i18n.language) {
-			i18n.changeLanguage(savedLanguage)
-		}
-	}, [i18n])
-
 	const changeLanguage = (lng: string) => {
 		i18n.changeLanguage(lng)
-		localStorage.setItem('language', lng)
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('language', lng)
+		}
 	}
+
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const savedLanguage = localStorage.getItem('language') || 'en'
+
+			setTimeout(() => {
+				changeLanguage(savedLanguage)
+			}, 2000)
+		}
+	}, [i18n])
 
 	const en = i18n.language === 'en'
 	const uk = i18n.language === 'uk'
